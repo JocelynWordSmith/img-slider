@@ -9,7 +9,7 @@ function renderArr (array, destination){
 };
 
 function renderObj (obj, destination){
-		console.log(obj.data.results[0].title);
+		console.log(obj.data);
 		var rendered = showInfo(obj);
 		destination.prepend(rendered);
 	}
