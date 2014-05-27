@@ -1,8 +1,19 @@
+
+var showInfo = _.template($('.info-master').text());
+
+function renderArr (array, destination){
+	array.forEach(function(module){
+		var rendered = showRepos(module);
+		destination.prepend(rendered);
+	});
+}
+
 $.getJSON('http://gateway.marvel.com:80/v1/public/creators/6001/comics?apikey=ecbc9156149622b1e7ffc3da73eea458', function() {
   console.log( "success" );
 })
   .done(function() {
     console.log( "second success" );
+    renderArr(data, $('.info-list'));
   })
   .fail(function() {
     console.log( "error" );
@@ -10,6 +21,9 @@ $.getJSON('http://gateway.marvel.com:80/v1/public/creators/6001/comics?apikey=ec
   .always(function() {
     console.log( "complete" );
   });
+
+
+
 
 
 var imgList = ['https://s3.amazonaws.com/ooomf-com-files/ikZyw45kT4m16vHkHe7u_9647713235_29ce0305d2_o.jpg', 'https://s3.amazonaws.com/ooomf-com-files/BIR62RGGjGxN5nrbnzwu_3.jpg', 'https://s3.amazonaws.com/ooomf-com-files/YOfYx7zhTvYBGYs6g83s_IMG_8643.jpg' ];
