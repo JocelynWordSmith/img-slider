@@ -8,7 +8,8 @@ function renderArr (array, destination){
 	});
 };
 
-function renderObj (data, destination){
+function renderObj (obj, destination){
+		console.log(obj.data.results[0].title);
 		var rendered = showInfo(data);
 		destination.prepend(rendered);
 	}
