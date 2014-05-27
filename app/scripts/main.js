@@ -7,9 +7,11 @@ function renderArr (array, destination){
 		destination.prepend(rendered);
 	});
 };
+var apiObj;
 
 function renderObj (obj, destination){
-		console.log(obj.data);
+		apiObj = obj;
+		console.log(obj);
 		var rendered = showInfo(obj);
 		destination.prepend(rendered);
 	}
