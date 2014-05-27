@@ -1,4 +1,4 @@
-$getJSON('http://gateway.marvel.com:80/v1/public/creators/6001/comics?apikey=ecbc9156149622b1e7ffc3da73eea458', function() {
+$.getJSON('http://gateway.marvel.com:80/v1/public/creators/6001/comics?apikey=ecbc9156149622b1e7ffc3da73eea458', function() {
   console.log( "success" );
 })
   .done(function() {
