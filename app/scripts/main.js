@@ -6,10 +6,15 @@ function renderArr (array, destination){
 		var rendered = showRepos(module);
 		destination.prepend(rendered);
 	});
-}
+};
+
+function renderObj (data, destination){
+		var rendered = showInfo(data);
+		destination.prepend(rendered);
+	}
 
 $.getJSON('http://gateway.marvel.com:80/v1/public/characters?name=Gambit&apikey=ecbc9156149622b1e7ffc3da73eea458').done(function(data){
-	renderArr(data, $('.info-list'));
+	renderObj(data, $('.info-list'));
 });
   // .done(function(data) {
   //   console.log( "second success" );
