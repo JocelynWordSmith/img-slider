@@ -8,19 +8,19 @@ function renderArr (array, destination){
 	});
 }
 
-$.getJSON('http://gateway.marvel.com:80/v1/public/creators/6001/comics?apikey=ecbc9156149622b1e7ffc3da73eea458', function() {
-  console.log( "success" );
-})
-  .done(function(data) {
-    console.log( "second success" );
-    renderArr(data, $('.info-list'));
-  })
-  .fail(function() {
-    console.log( "error" );
-  })
-  .always(function() {
-    console.log( "complete" );
-  });
+$.getJSON('http://gateway.marvel.com:80/v1/public/characters?name=Gambit&apikey=ecbc9156149622b1e7ffc3da73eea458').done(function(data){
+	renderArr(data, $('.info-list'));
+});
+  // .done(function(data) {
+  //   console.log( "second success" );
+  //   renderArr(data, $('.info-list'));
+  // })
+  // .fail(function() {
+  //   console.log( "error" );
+  // })
+  // .always(function() {
+  //   console.log( "complete" );
+  // });
 
 
 
