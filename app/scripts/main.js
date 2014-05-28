@@ -16,8 +16,8 @@ function renderObj (obj, destination){
 		destination.prepend(rendered);
 	}
 
-$.getJSON('http://gateway.marvel.com:80/v1/public/characters?name=Gambit&apikey=ecbc9156149622b1e7ffc3da73eea458').done(function(data){
-	renderObj(data, $('.info-list'));
+$.getJSON('http://gateway.marvel.com:80/v1/public/characters?name=Gambit&apikey=ecbc9156149622b1e7ffc3da73eea458').done(function(obj){
+	renderObj(obj, $('.info-list'));
 });
   // .done(function(data) {
   //   console.log( "second success" );
@@ -30,16 +30,16 @@ $.getJSON('http://gateway.marvel.com:80/v1/public/characters?name=Gambit&apikey=
   //   console.log( "complete" );
   // });
 
-function addComic (url) {
-   $('.infolist').prepend('<img src=' + url + '.jpg>')
-}
+// function addComic (url) {
+//    $('.infolist').prepend('<img src=' + url + '.jpg>')
+// }
 
 
-apiObj.data.results.forEach(function(entry){
-if (entry == 'images') {
-  console.log(entry.path)
-}
-})
+// apiObj.data.results.forEach(function(entry){
+// if (entry == 'images') {
+//   console.log(entry.path)
+// }
+// })
 
 for (var i = 0; i <= (api.data.results[i].results - 1); i++) {
 	if (apiObj.data.results[i].images[0] && apiObj.data.results[i].images !=[]){
