@@ -41,7 +41,7 @@ $.getJSON('http://gateway.marvel.com:80/v1/public/characters?name=Gambit&apikey=
 // }
 // })
 
-for (var i = 0; i <= (api.data.results[i].results - 1); i++) {
+for (var i = 0; i <= (apiObj.data.results[i].results - 1); i++) {
 	if (apiObj.data.results[i].images[0] && apiObj.data.results[i].images !=[]){
 	console.log(i)
 	$('.info-list').prepend('<img src=' + apiObj.data.results[i].images[0].path + '.jpg >');	
