@@ -30,6 +30,22 @@ $.getJSON('http://gateway.marvel.com:80/v1/public/characters?name=Gambit&apikey=
   //   console.log( "complete" );
   // });
 
+function addComic (url) {
+   $('.infolist').prepend('<img src=' + url + '.jpg>')
+}
+
+
+apiObj.data.results.forEach(function(entry){
+if (entry == 'images') {
+  console.log(entry.path)
+}
+})
+
+for (var i = 0; i <= (api.data.results[i].results - 1); i++) {
+	if (apiObj.data.results[i].images[0] && apiObj.data.results[i].images !=[]){
+	console.log(i)
+	$('.info-list').prepend('<img src=' + apiObj.data.results[i].images[0].path + '.jpg >');	
+}};
 
 
 
